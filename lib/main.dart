@@ -59,15 +59,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 child: ListTile(
-                  leading: Icon(Icons.local_hospital_rounded),
+                  leading: Icon(
+                    Icons.local_hospital_rounded,
+                    color: Colors.pinkAccent,
+                  ),
                   title: const Text("薬局アプリ"),
                   onTap: () {},
                 )),
             Container(
               decoration: const BoxDecoration(
-                  border: Border(bottom: BorderSide(color: Colors.blue))),
+                border: Border(
+                  bottom: BorderSide(
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
               child: ListTile(
-                leading: Icon(Icons.store_mall_directory_rounded),
+                leading: Icon(
+                  Icons.local_grocery_store,
+                  color: Colors.blue,
+                ),
                 title: const Text("業務ディスカウントストアアプリ"),
                 onTap: () {},
               ),
@@ -76,18 +87,43 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: BoxDecoration(
                   border: Border(bottom: BorderSide(color: Colors.lightGreen))),
               child: ListTile(
-                leading: Icon(Icons.park),
+                leading: Icon(
+                  Icons.park,
+                  color: Colors.lightGreen,
+                ),
                 title: const Text("イベントスペース系アプリ"),
                 onTap: () {},
               ),
             ),
-            ListTile(
-              title: const Text("イベントスペース系アプリ"),
-              onTap: () {},
+            Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(color: Colors.orangeAccent),
+                ),
+              ),
+              child: ListTile(
+                leading: Icon(
+                  Icons.storefront_sharp,
+                  color: Colors.orangeAccent,
+                ),
+                title: const Text("スーパーマーケットアプリ"),
+                onTap: () {},
+              ),
             ),
-            ListTile(
-              title: const Text("イベントスペース系アプリ"),
-              onTap: () {},
+            Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(color: Colors.deepOrangeAccent),
+                ),
+              ),
+              child: ListTile(
+                leading: Icon(
+                  Icons.thumb_up,
+                  color: Colors.deepOrangeAccent,
+                ),
+                title: const Text("整体アプリ"),
+                onTap: () {},
+              ),
             ),
           ],
         ),
