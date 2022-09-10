@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_introduce_myself/screens/drawer_screen.dart';
+import 'package:flutter_introduce_myself/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,93 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            Container(
-              padding: EdgeInsets.all(15.0),
-              child: const Text(
-                "今まで携わったアプリ集",
-                style: TextStyle(fontSize: 20.0),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-                decoration: const BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Colors.pinkAccent),
-                  ),
-                ),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.local_hospital_rounded,
-                    color: Colors.pinkAccent,
-                  ),
-                  title: const Text("薬局アプリ"),
-                  onTap: () {},
-                )),
-            Container(
-              decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.blue,
-                  ),
-                ),
-              ),
-              child: ListTile(
-                leading: Icon(
-                  Icons.local_grocery_store,
-                  color: Colors.blue,
-                ),
-                title: const Text("業務ディスカウントストアアプリ"),
-                onTap: () {},
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: Colors.lightGreen))),
-              child: ListTile(
-                leading: Icon(
-                  Icons.park,
-                  color: Colors.lightGreen,
-                ),
-                title: const Text("イベントスペース系アプリ"),
-                onTap: () {},
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(color: Colors.orangeAccent),
-                ),
-              ),
-              child: ListTile(
-                leading: Icon(
-                  Icons.storefront_sharp,
-                  color: Colors.orangeAccent,
-                ),
-                title: const Text("スーパーマーケットアプリ"),
-                onTap: () {},
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(color: Colors.deepOrangeAccent),
-                ),
-              ),
-              child: ListTile(
-                leading: Icon(
-                  Icons.perm_identity_outlined,
-                  color: Colors.deepOrangeAccent,
-                ),
-                title: const Text("整体アプリ"),
-                onTap: () {},
-              ),
-            ),
-          ],
-        ),
-      ),
+      drawer: DrawerScreen(),
       appBar: AppBar(
         title: Text(widget.title),
         centerTitle: true,
