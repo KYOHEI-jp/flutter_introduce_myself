@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               child: ListTile(
                 leading: Icon(
-                  Icons.thumb_up,
+                  Icons.perm_identity_outlined,
                   color: Colors.deepOrangeAccent,
                 ),
                 title: const Text("整体アプリ"),
