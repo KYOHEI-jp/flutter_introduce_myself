@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_introduce_myself/projects/screens/discount_store_screens/discount_store_screen.dart';
 import 'package:flutter_introduce_myself/projects/screens/drug_store_screens/drug_store_screen.dart';
 
 const colorizeColors = [
@@ -124,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DrugStoreScreen(),
+                    builder: (context) => const DrugStoreScreen(),
                   ),
                 );
               },
@@ -144,7 +145,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.blue,
               ),
               title: const Text("業務ディスカウントストアアプリ"),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => DiscountStoreScreen(),
+                  ),
+                );
+              },
             ),
           ),
           Container(
@@ -189,6 +196,21 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {},
             ),
           ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(color: Colors.deepPurpleAccent),
+              ),
+            ),
+            child: ListTile(
+              leading: Icon(
+                Icons.handyman,
+                color: Colors.deepPurpleAccent,
+              ),
+              title: const Text("使用した事のあるライブラリなど"),
+              onTap: () {},
+            ),
+          ),
           SizedBox(
             height: 15.0,
           ),
@@ -221,10 +243,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             child: ListTile(
               leading: Icon(
-                Icons.perm_identity_outlined,
+                Icons.umbrella_sharp,
                 color: Colors.deepOrangeAccent,
               ),
-              title: const Text("整体アプリ"),
+              title: const Text("天気アプリ"),
               onTap: () {},
             ),
           ),
