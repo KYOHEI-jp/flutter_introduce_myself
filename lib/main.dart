@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_introduce_myself/projects/screens/discount_store_screens/discount_store_screen.dart';
 import 'package:flutter_introduce_myself/projects/screens/drug_store_screens/drug_store_screen.dart';
+import 'package:flutter_introduce_myself/projects/screens/event_space_screens/event_space_screen.dart';
 
 const colorizeColors = [
   Colors.pinkAccent,
@@ -46,14 +47,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,7 +157,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.lightGreen,
               ),
               title: const Text("イベントスペース系アプリ"),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => EventSpaceScreen()),
+                );
+              },
             ),
           ),
           Container(
