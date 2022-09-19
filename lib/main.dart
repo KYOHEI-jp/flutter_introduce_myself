@@ -47,7 +47,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,11 +79,31 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Container(
             padding: EdgeInsets.all(20.0),
-            child: Text(
+            child: const Text(
               "これまでAndroidエンジニアとして働いてきたので、Flutterを使いながら棚卸しをしていきます。\n 詳しくは左のドロワーメニューからどうぞ！",
               style: TextStyle(fontSize: 25.0),
             ),
           ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          Container(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.network(
+                  'https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU',
+                  height: 35.0,
+                  width: 30.0,
+                ),
+                const SizedBox(
+                  width: 20.0,
+                ),
+                const Text("KYOHEI-jp"),
+              ],
+            ),
+          )
         ],
       ),
     );
@@ -231,6 +250,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               title: const Text("TODOアプリ"),
               onTap: () {},
+              trailing: const Text("BLoC"),
             ),
           ),
           Container(
@@ -246,6 +266,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               title: const Text("天気アプリ"),
               onTap: () {},
+              trailing: Text("Provider"),
             ),
           ),
         ],
