@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_introduce_myself/projects/screens/drug_store_screens/works_page.dart';
+import 'package:flutter_introduce_myself/projects/screens/drug_store_screens/drug_store_works_page.dart';
 
 class DrugStoreScreen extends StatefulWidget {
   const DrugStoreScreen({Key? key}) : super(key: key);
