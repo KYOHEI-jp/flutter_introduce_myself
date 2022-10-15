@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_introduce_myself/projects/screens/delica_screens/delica_screen.dart';
 import 'package:flutter_introduce_myself/projects/screens/discount_store_screens/discount_store_screen.dart';
 import 'package:flutter_introduce_myself/projects/screens/drug_store_screens/drug_store_screen.dart';
 import 'package:flutter_introduce_myself/projects/screens/event_space_screens/event_space_screen.dart';
@@ -211,6 +212,22 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               title: const Text("整体アプリ"),
               onTap: () {},
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+                border: Border(bottom: BorderSide(color: Colors.black38))),
+            child: ListTile(
+              leading: Icon(
+                Icons.cake,
+                color: Colors.black38,
+              ),
+              title: const Text("デリカ系アプリ"),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => DelicaScreen()),
+                );
+              },
             ),
           ),
           Container(
