@@ -21,6 +21,8 @@ class _DelicaScreenState extends State<DelicaScreen> {
   List<Works> workList = [
     Works("輝度変更削除", "バーコードが常時表示されるクーポンが一覧に表示されると、画面の輝度がMAXになる仕様だったが、画面の輝度MAXになる処理を削除",
         "画面の輝度変更の理解が深まった"),
+    Works("会員証バーコード非表示", "クーポン詳細から戻るボタンで戻ると、通常はタップしないと出ないようになっている会員証バーコードが表示されていた",
+        "ライフサイクルと、View.VISIBLEなどの理解"),
   ];
 
   @override
